@@ -43,6 +43,34 @@ This is a Python application built using Tkinter and SQLite for managing credit 
 - `app_user_id`: Foreign key referencing the `user_id` in the USER1 table.
 - `app_type`: Type of application.
 
+## Purpose
+
+This database schema is designed to manage information related to branches, users, credit cards, credit limits, and applications within an organization. The tables are structured to maintain data integrity and enforce relationships between entities through the use of primary keys and foreign key constraints.
+
+The schema allows for the tracking of branch details, user information, credit card details, credit limits, and applications submitted by users. By linking tables through foreign key relationships, it ensures referential integrity and facilitates efficient data retrieval and management.
+
+## Usage
+
+To use this database schema, you can execute the provided SQL statements using a compatible database management system (DBMS) or query tool. The schema creation process involves executing each CREATE TABLE statement in the specified order to create the necessary tables and define the columns and constraints.
+
+Once the schema is created, you can start populating the tables with relevant data by executing appropriate INSERT INTO statements.
+
+To query the data, you can use SQL statements like SELECT, INSERT, UPDATE, and DELETE to perform operations on the tables and retrieve the desired information.
+
+It is important to ensure that the necessary database privileges are granted to the user executing the SQL statements to avoid any permission-related issues.
+
+## Database Relationships
+
+The database schema establishes the following relationships between tables:
+
+- The USER1 table has a foreign key constraint referencing the BRANCH table, indicating that each user belongs to a specific branch.
+- The CREDIT_CARD table has a foreign key constraint referencing the USER1 table, indicating that each credit card is associated with a specific user.
+- The LIMITS table has a foreign key constraint referencing the CREDIT_CARD table, indicating that each credit limit is associated with a specific credit card.
+- The APPLICATIONS table has a foreign key constraint referencing the USER1 table, indicating that each application is submitted by a specific user.
+
+These relationships help maintain data consistency and enable data retrieval across related entities.
+
+
 ## Window Output
 
 The application provides a graphical user interface (GUI) built using Tkinter. Upon running the application, a window is displayed with various fields, labels, and buttons for performing different operations. The main class name used in the application is `CreditCardApp`.
