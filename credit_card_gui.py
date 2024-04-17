@@ -2,6 +2,46 @@ import tkinter as tk
 import sqlite3
 from tkinter import messagebox
 
+
+class LoginApp:
+    def __init__(self, master):
+        self.master = master
+        master.title("Login")
+        
+
+        self.label_username = tk.Label(master, text="Username:")
+        self.label_username.grid(row=0, column=0, padx=10, pady=5)
+        self.entry_username = tk.Entry(master)
+        self.entry_username.grid(row=0, column=1, padx=10, pady=5)
+
+        self.label_password = tk.Label(master, text="Password:")
+        self.label_password.grid(row=1, column=0, padx=10, pady=5)
+        self.entry_password = tk.Entry(master, show="*")
+        self.entry_password.grid(row=1, column=1, padx=10, pady=5)
+
+        self.button_login = tk.Button(master, text="Login", command=self.login)
+        self.button_login.grid(row=2, column=0, columnspan=2, pady=10)
+
+    def login(self):
+        username = self.entry_username.get()
+        password = self.entry_password.get()
+
+        # Replace with your authentication logic
+        if username == "admin" and password == "password":
+            messagebox.showinfo("Login Successful", "Welcome, " + username + "!")
+            # Open the main application window after successful login
+            self.open_main_app()
+        else:
+            messagebox.showerror("Login Failed", "Invalid username or password.")
+
+    def open_main_app(self):
+        # Close the login window and open the main application window
+        self.master.destroy()
+        root = tk.Tk()
+        app = CreditCardApp(root)
+        root.mainloop()
+
+
 class CreditCardApp:
     def __init__(self, master):
         self.master = master
@@ -621,14 +661,9 @@ class CreditCardApp:
         except sqlite3.Error as e:
             messagebox.showerror("Error", str(e))
 
-
-
-
-
-
 def main():
     root = tk.Tk()
-    app = CreditCardApp(root)
+    app = LoginApp(root)
     root.mainloop()
 
 
