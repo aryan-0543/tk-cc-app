@@ -2,7 +2,22 @@
 
 This is a Python application built using Tkinter and SQLite for managing credit card data. The application provides functionality for inserting, updating, deleting, retrieving, and viewing all data stored in the database.
 
-## Features
+## Multiple Window GUI Application
+This application demonstrates a simple multiple window GUI built using Tkinter in Python. It consists of a main login window and additional windows for various functionalities.
+
+### Features
+Login Window: Allows users to log in with their username and password.
+Main Application Window: After successful login, users can access the main application window where they can perform various tasks.
+
+### Functionality
+The application provides the following functionality:
+
+Login: Users can log in using their username and password.
+Main Application: Upon successful login, users can access the main application window.  
+
+
+
+## Application Features
 
 - **Insert Data**: Add new records to the database.
 - **Update Data**: Modify existing records in the database.
@@ -98,4 +113,5 @@ The application provides a graphical user interface (GUI) built using Tkinter. U
 
 Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request with your changes.
 
-
+# License
+This project is licensed under the MIT License - see the LICENSE file for details.
