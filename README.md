@@ -6,16 +6,20 @@ This is a Python application built using Tkinter and SQLite for managing credit 
 This application demonstrates a simple multiple window GUI built using Tkinter in Python. It consists of a main login window and additional windows for various functionalities.
 
 ### Features
-Login Window: Allows users to log in with their username and password.
-Main Application Window: After successful login, users can access the main application window where they can perform various tasks.
+1.Welcome Page: The initial window displayed when the application starts.
+2.Login Window: Allows users to log in with their username and password.
+3.Create New Account: Allows users to create a new account if they don't have one already.
+4.Main Menu: Provides access to various functionalities after successful login.
+5.Additional Windows: Depending on the functionality, additional windows may open for specific tasks.
 
 ### Functionality
 The application provides the following functionality:
 
+Welcome Page: Users are greeted with a welcome message and options to log in or create a new account.
 Login: Users can log in using their username and password.
-Main Application: Upon successful login, users can access the main application window.  
-
-
+Create New Account: Users can create a new account if they don't have one already.
+Main Menu: Upon successful login, users can access the main application window, which provides access to various functionalities such as managing credit cards, setting limits, applying for new credit cards, etc.
+Additional Windows: Depending on the selected functionality from the main menu, additional windows may open for specific tasks such as creating a new credit card, setting limits, etc.
 
 ## Application Features
 
@@ -107,6 +111,9 @@ The application provides a graphical user interface (GUI) built using Tkinter. U
    - Tkinter: Tkinter is included with Python. No separate installation is required.
 3. Run the main script (`credit_card_gui.py`) to launch the application.
 
+# Implementation
+
+The application is implemented using Tkinter for the graphical user interface. Each window is created as a separate class, allowing for modularization and easy navigation between windows. The login functionality authenticates users against a database of registered users.
 
 
 ## Contribution
